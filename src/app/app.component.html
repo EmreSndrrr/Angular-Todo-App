@@ -1,0 +1,25 @@
+<h1 style="text-align: center;">Todo App</h1>
+
+  <br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-3">
+      <div class="input-group mb-3">
+        <button (click)="saveTodo()" style="color: white;" class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" >add Todo</button>
+        <input type="text" class="form-control" placeholder="Enter Todo..." aria-label="Example text with button addon" aria-describedby="button-addon1" [(ngModel)]="newTodo">
+      </div>
+      <table class="table table-striped">
+      
+        
+          <tr *ngFor="let todo of todos; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{todo.name}}</td>
+            <td class="xar" (click)="remove(i)" style="color: red; font-weight: bold;">X</td>
+            
+          </tr>
+          
+      </table>
+    </div>
+ 
+  </div>
+</div>
